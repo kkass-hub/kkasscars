@@ -1,0 +1,647 @@
+:root {
+  color-scheme: light;
+  --bg: #f8fbff;
+  --surface: #ffffff;
+  --surface-alt: #eef6ff;
+  --text: #0f172a;
+  --muted: #64748b;
+  --accent: #2563eb;
+  --accent-dark: #1d4ed8;
+  --danger: #ef4444;
+  --border: rgba(15,23,42,0.12);
+  --shadow: 0 24px 60px rgba(15,23,42,0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  min-height: 100%;
+  font-family: 'Roboto', sans-serif;
+  color: var(--text);
+  background: linear-gradient(180deg, #f8fbff 0%, #eef6ff 100%);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a { color: inherit; text-decoration: none; }
+
+button, input, select, textarea {
+  font: inherit;
+}
+
+.container {
+  width: min(1120px, calc(100% - 2rem));
+  margin: 0 auto;
+}
+
+.site-header {
+  width: 100%;
+  background: rgba(255,255,255,0.95);
+  border-bottom: 1px solid var(--border);
+  position: relative;
+  z-index: 20;
+}
+
+.sticky {
+  position: sticky;
+  top: 0;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 0;
+}
+
+.brand {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.15rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text);
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.site-nav a {
+  color: var(--muted);
+  transition: color 0.2s ease;
+}
+
+.site-nav a:hover {
+  color: var(--text);
+}
+
+.header-actions {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.icon-btn, .secondary-btn, .link-btn {
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text);
+  padding: 0.9rem 1.2rem;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.icon-btn:hover, .secondary-btn:hover, .link-btn:hover {
+  transform: translateY(-1px);
+  background: rgba(37,99,235,0.08);
+}
+
+.cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.95rem 1.4rem;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  transition: filter 0.2s ease, transform 0.2s ease;
+}
+
+.cta-btn:hover {
+  filter: brightness(1.05);
+  transform: translateY(-1px);
+}
+
+.cta-btn.large {
+  padding: 1.15rem 1.8rem;
+}
+
+.mobile-menu-toggle {
+  display: none;
+  border: none;
+  background: transparent;
+  color: var(--text);
+  font-size: 1.4rem;
+}
+
+.hero, .section {
+  padding: 3rem 0;
+}
+
+.split-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1.4fr 1fr;
+  align-items: center;
+}
+
+.hero-copy h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(2.75rem, 4vw, 4.25rem);
+  line-height: 1.02;
+  margin: 0;
+}
+
+.hero-copy .intro,
+.section .intro {
+  margin: 1.25rem 0 0;
+  max-width: 34rem;
+  color: var(--muted);
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--accent);
+  font-size: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.hero-cta-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.hero-search-card, .card, .info-card, .inventory-card, .vehicle-viewer, .payment-card, .sell-flow-card, .sell-summary, .booking-card, .vehicle-info-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  border-radius: 1.5rem;
+}
+
+.hero-search-card {
+  padding: 2rem;
+}
+
+.hero-search-card h2,
+.card-head h2,
+.detail-grid h2 {
+  margin-top: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.search-form {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.field-row {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.field-row label {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.field-row input,
+.field-row select,
+.calc-field input,
+.sell-flow-card input,
+.sell-flow-card select,
+.sell-flow-card textarea {
+  width: 100%;
+  padding: 0.95rem 1rem;
+  background: #f8fbff;
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+}
+
+.field-row select,
+.sell-flow-card select {
+  appearance: none;
+}
+
+.scrollable-cards {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(260px, 1fr);
+  gap: 1.5rem;
+  overflow-x: auto;
+  padding-bottom: 0.5rem;
+}
+
+.scrollable-cards::-webkit-scrollbar {
+  height: 8px;
+}
+
+.scrollable-cards::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.14);
+  border-radius: 999px;
+}
+
+.vehicle-card, .info-card, .badge-card, .inventory-card, .sell-summary, .booking-card, .payment-card, .vehicle-viewer, .sell-flow-card, .vehicle-info-card {
+  padding: 1.5rem;
+}
+
+.vehicle-card {
+  min-width: 260px;
+}
+
+.vehicle-card h3,
+.inventory-card h3,
+.sell-summary h2,
+.booking-card h2 {
+  margin: 1rem 0 0.4rem;
+  font-size: 1.25rem;
+}
+
+.vehicle-card p,
+.inventory-card p,
+.info-card p,
+.trust-card p,
+.detail-meta span,
+.valuation-support span,
+.booking-stats span {
+  color: var(--muted);
+}
+
+.vehicle-card strong,
+.inventory-card strong,
+.valuation-metric strong,
+.detail-meta strong {
+  display: block;
+  margin-top: 0.75rem;
+  font-size: 1.1rem;
+}
+
+.vehicle-badge {
+  display: inline-flex;
+  padding: 0.45rem 0.85rem;
+  border-radius: 999px;
+  background: rgba(37,99,235,0.12);
+  color: var(--accent);
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+}
+
+.cards-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.info-card {
+  min-height: 190px;
+}
+
+.why-section .cards-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.trust-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.trust-cards {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.badge-card {
+  padding: 1.5rem;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 1.25rem;
+}
+
+.badge-card strong {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.page-hero {
+  padding-top: 4rem;
+  padding-bottom: 3rem;
+}
+
+.hero-detail-grid,
+.detail-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 2fr 1fr;
+}
+
+.car-detail-summary {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.spec-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.spec-badges span,
+.detail-meta div,
+.valuation-support div,
+.booking-stats div {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  color: var(--text);
+}
+
+.spec-badges span {
+  padding: 0.65rem 1rem;
+  border-radius: 999px;
+  background: rgba(39,184,255,0.12);
+  color: var(--accent);
+  font-size: 0.9rem;
+}
+
+.detail-meta {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.detail-meta div {
+  background: rgba(255,255,255,0.04);
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+.vehicle-viewer {
+  display: grid;
+  gap: 1rem;
+}
+
+.viewer-topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.viewer-frame {
+  min-height: 320px;
+  overflow: hidden;
+  border-radius: 1.5rem;
+}
+
+.viewer-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.viewer-controls {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.detail-aside .card {
+  display: grid;
+  gap: 1rem;
+}
+
+.payment-card {
+  padding-bottom: 1.5rem;
+}
+
+.calc-field {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.payment-result {
+  margin-top: 1rem;
+  font-size: 1rem;
+}
+
+.sticky-book {
+  width: 100%;
+  justify-content: center;
+  text-align: center;
+}
+
+.booking-card {
+  padding: 2rem;
+  margin-top: 2rem;
+}
+
+.booking-detail {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.booking-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.booking-stats div {
+  padding: 1rem;
+  background: rgba(255,255,255,0.05);
+  border-radius: 1rem;
+}
+
+.inventory-layout {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 2rem;
+}
+
+.filter-panel {
+  display: grid;
+  gap: 1rem;
+  padding: 1.5rem;
+}
+
+.panel-head h2 {
+  margin: 0 0 0.35rem;
+}
+
+.filter-group {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.range-group span {
+  color: var(--muted);
+}
+
+.grid-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.inventory-cards {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.sale-cards {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.inventory-card {
+  overflow: hidden;
+  display: grid;
+  gap: 1rem;
+}
+
+.inventory-card img {
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+}
+
+.card-body {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.vehicle-meta {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.sell-layout {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 2rem;
+}
+
+.sell-flow-card {
+  padding: 2rem;
+}
+
+.progress-bar {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.step {
+  width: 2rem;
+  height: 2rem;
+  display: grid;
+  place-items: center;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.05);
+  color: var(--muted);
+  font-weight: 700;
+}
+
+.step.active {
+  background: var(--accent);
+  color: #fff;
+}
+
+.form-step {
+  display: none;
+  gap: 1rem;
+}
+
+.form-step.active {
+  display: grid;
+}
+
+.form-group {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.sell-summary {
+  padding: 2rem;
+  display: grid;
+  gap: 1.25rem;
+}
+
+.valuation-metric {
+  padding: 1.5rem;
+  background: rgba(255,255,255,0.05);
+  border-radius: 1.25rem;
+}
+
+.valuation-metric strong {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.valuation-support {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.site-footer {
+  padding: 2rem 0;
+  border-top: 1px solid rgba(255,255,255,0.06);
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.footer-nav {
+  display: flex;
+  gap: 1rem;
+}
+
+@media (max-width: 960px) {
+  .split-grid,
+  .hero-detail-grid,
+  .detail-grid,
+  .inventory-layout,
+  .sell-layout,
+  .trust-grid,
+  .trust-cards,
+  .detail-meta,
+  .booking-stats,
+  .inventory-cards,
+  .valuation-support {
+    grid-template-columns: 1fr;
+  }
+
+  .site-nav {
+    display: none;
+  }
+
+  .mobile-menu-toggle {
+    display: inline-flex;
+  }
+}
+
+@media (max-width: 720px) {
+  .hero, .section {
+    padding: 2rem 0;
+  }
+  .hero-copy h1 {
+    font-size: 2.5rem;
+  }
+}

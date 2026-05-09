@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inventory | KKASS CAR</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Roboto:wght@400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header class="site-header sticky">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">KKASS CAR</a>
+      <nav class="site-nav">
+        <a href="index.html">Home</a>
+        <a href="for-sale.html">For Sale</a>
+        <a href="sell.html">Sell Your Car</a>
+        <a href="#inventory">Inventory</a>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-btn">Profile</button>
+        <button class="cta-btn">Sign In</button>
+      </div>
+      <button class="mobile-menu-toggle" aria-label="Toggle navigation">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="section page-hero">
+      <div class="container">
+        <p class="eyebrow">Inventory</p>
+        <h1>Search premium vehicles with advanced filters.</h1>
+        <p class="intro">A curated collection of luxury performance, electric, and exclusive certified pre-owned vehicles.</p>
+      </div>
+    </section>
+
+    <section class="section inventory-layout" id="inventory">
+      <aside class="filter-panel">
+        <div class="panel-head">
+          <h2>Filter Inventory</h2>
+          <p>Select what matters most.</p>
+        </div>
+        <div class="filter-group">
+          <label>Fuel Type</label>
+          <select><option>All</option><option>Gasoline</option><option>Electric</option><option>Hybrid</option></select>
+        </div>
+        <div class="filter-group">
+          <label>Body Style</label>
+          <select><option>All</option><option>Sedan</option><option>Coupe</option><option>SUV</option></select>
+        </div>
+        <div class="filter-group">
+          <label>Color</label>
+          <select><option>All</option><option>Black</option><option>White</option><option>Red</option></select>
+        </div>
+        <div class="filter-group">
+          <label>Drivetrain</label>
+          <select><option>All</option><option>AWD</option><option>RWD</option><option>FWD</option></select>
+        </div>
+        <div class="filter-group range-group">
+          <label>Price Range</label>
+          <input type="range" min="50000" max="250000" value="120000" />
+          <span>$50k — $250k+</span>
+        </div>
+        <button class="cta-btn">Apply Filters</button>
+      </aside>
+
+      <section class="inventory-grid">
+        <div class="grid-head">
+          <div>
+            <p class="eyebrow">Live Inventory</p>
+            <h2>High-performance vehicles ready to deliver.</h2>
+          </div>
+          <button class="secondary-btn">Sort by Price</button>
+        </div>
+
+        <div class="grid cards-grid inventory-cards">
+          <article class="inventory-card">
+            <img src="https://images.unsplash.com/photo-1511919884226-fd3cad34687c?auto=format&fit=crop&w=900&q=80" alt="2024 Porsche 911 Turbo S" />
+            <div class="card-body">
+              <div class="vehicle-meta"><span>2024</span><span>2,150 mi</span><span>AWD</span></div>
+              <h3>2024 Porsche 911 Turbo S</h3>
+              <p>3.8L Twin-Turbo • 640 HP • Premium Comfort</p>
+              <strong>$214,900</strong>
+              <a class="link-btn" href="vehicle.html">View Details</a>
+            </div>
+          </article>
+          <article class="inventory-card">
+            <img src="https://images.unsplash.com/photo-1511391402744-81fc830eda7a?auto=format&fit=crop&w=900&q=80" alt="2023 Tesla Model S Plaid" />
+            <div class="card-body">
+              <div class="vehicle-meta"><span>2023</span><span>1,450 mi</span><span>AWD</span></div>
+              <h3>2023 Tesla Model S Plaid</h3>
+              <p>Electric • 1,020 HP • Autopilot Ready</p>
+              <strong>$129,900</strong>
+              <a class="link-btn" href="vehicle.html">View Details</a>
+            </div>
+          </article>
+          <article class="inventory-card">
+            <img src="https://images.unsplash.com/photo-1494972688394-4cc796f9e4c1?auto=format&fit=crop&w=900&q=80" alt="2023 BMW M5 CS" />
+            <div class="card-body">
+              <div class="vehicle-meta"><span>2023</span><span>2,300 mi</span><span>RWD</span></div>
+              <h3>2023 BMW M5 CS</h3>
+              <p>4.4L V8 • 627 HP • Track-ready engineering</p>
+              <strong>$159,000</strong>
+              <a class="link-btn" href="vehicle.html">View Details</a>
+            </div>
+          </article>
+          <article class="inventory-card">
+            <img src="https://images.unsplash.com/photo-1483721310020-03333e577078?auto=format&fit=crop&w=900&q=80" alt="2024 Mercedes-AMG GT" />
+            <div class="card-body">
+              <div class="vehicle-meta"><span>2024</span><span>1,850 mi</span><span>AWD</span></div>
+              <h3>2024 Mercedes-AMG GT</h3>
+              <p>4.0L V8 • 577 HP • Exclusive craftsmanship</p>
+              <strong>$199,500</strong>
+              <a class="link-btn" href="vehicle.html">View Details</a>
+            </div>
+          </article>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2026 KKASS CAR. High-end automotive commerce built for modern buyers.</p>
+      <nav class="footer-nav">
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href="#">Support</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sell Your Car | KKASS CAR</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Roboto:wght@400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header class="site-header sticky">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">KKASS CAR</a>
+      <nav class="site-nav">
+        <a href="index.html">Home</a>
+        <a href="inventory.html">Inventory</a>
+        <a href="for-sale.html">For Sale</a>
+        <a href="#sell-form">Sell Your Car</a>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-btn">Profile</button>
+        <button class="cta-btn">Sign In</button>
+      </div>
+      <button class="mobile-menu-toggle" aria-label="Toggle navigation">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="section page-hero">
+      <div class="container">
+        <p class="eyebrow">Sell Your Car</p>
+        <h1>Get an instant valuation with our premium vehicle intake.</h1>
+        <p class="intro">A quick, secure experience for sellers who want top-market value and fast offers.</p>
+      </div>
+    </section>
+
+    <section class="section sell-layout" id="sell-form">
+      <div class="sell-flow-card card">
+        <div class="progress-bar">
+          <span class="step active">1</span>
+          <span class="step">2</span>
+          <span class="step">3</span>
+        </div>
+        <h2>Tell Us About Your Vehicle</h2>
+        <form id="sellForm">
+          <div class="form-step active" data-step="1">
+            <div class="form-group">
+              <label for="sellMake">Make</label>
+              <input id="sellMake" type="text" placeholder="e.g. Mercedes" required />
+            </div>
+            <div class="form-group">
+              <label for="sellModel">Model</label>
+              <input id="sellModel" type="text" placeholder="e.g. AMG GT" required />
+            </div>
+            <div class="form-group">
+              <label for="sellYear">Year</label>
+              <input id="sellYear" type="number" placeholder="2022" required />
+            </div>
+            <div class="form-group">
+              <label for="sellMileage">Mileage</label>
+              <input id="sellMileage" type="number" placeholder="e.g. 21,000" required />
+            </div>
+          </div>
+
+          <div class="form-step" data-step="2">
+            <div class="form-group">
+              <label for="sellCondition">Condition</label>
+              <select id="sellCondition"><option>Excellent</option><option>Good</option><option>Fair</option></select>
+            </div>
+            <div class="form-group">
+              <label for="sellTransmission">Transmission</label>
+              <select id="sellTransmission"><option>Automatic</option><option>Manual</option></select>
+            </div>
+            <div class="form-group">
+              <label for="sellFuel">Fuel Type</label>
+              <select id="sellFuel"><option>Gasoline</option><option>Electric</option><option>Hybrid</option></select>
+            </div>
+            <div class="form-group">
+              <label for="sellPhotos">Upload Photos</label>
+              <input id="sellPhotos" type="file" accept="image/*" multiple />
+            </div>
+          </div>
+
+          <div class="form-step" data-step="3">
+            <div class="form-group">
+              <label for="sellerName">Full Name</label>
+              <input id="sellerName" type="text" placeholder="Your name" required />
+            </div>
+            <div class="form-group">
+              <label for="sellerEmail">Email</label>
+              <input id="sellerEmail" type="email" placeholder="you@example.com" required />
+            </div>
+            <div class="form-group">
+              <label for="sellerPhone">Phone</label>
+              <input id="sellerPhone" type="tel" placeholder="(555) 123-4567" required />
+            </div>
+            <div class="form-group">
+              <label for="sellerNotes">Additional Notes</label>
+              <textarea id="sellerNotes" rows="4" placeholder="Optional details about your vehicle"></textarea>
+            </div>
+          </div>
+
+          <div class="form-actions">
+            <button type="button" class="secondary-btn" id="prevStep">Back</button>
+            <button type="button" class="cta-btn" id="nextStep">Continue</button>
+          </div>
+        </form>
+      </div>
+
+      <aside class="sell-summary card">
+        <h2>Instant Valuation</h2>
+        <p>Based on our premium marketplace data, your vehicle could qualify for top offers from verified buyers.</p>
+        <div class="valuation-metric">
+          <strong>$82,300</strong>
+          <span>Estimated offer range</span>
+        </div>
+        <div class="valuation-support">
+          <div><strong>99%</strong><span>Fast approval rate</span></div>
+          <div><strong>24h</strong><span>Response time</span></div>
+        </div>
+      </aside>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2026 KKASS CAR. High-end automotive commerce built for modern buyers.</p>
+      <nav class="footer-nav">
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href="#">Support</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
